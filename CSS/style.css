@@ -1,0 +1,343 @@
+/* Made by Nourhan Farid Abo Baker */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+/* ======= General Classes: ======= */
+.bg-gray {
+    background-color: #CCCCCC;
+}
+
+.btn-red {
+    background-color: #D62E33;
+}
+
+
+/* ===================== Page Loader   ===================== */
+
+/* .loadingPage {
+    background-color: black !important;
+
+} */
+
+
+#loader {
+    width: 150px;
+    height: 150px;
+    border-left: 5px solid #38ff8e;
+    border-radius: 50%;
+    animation: right5231 0.9s linear infinite;
+    top: 250px;
+    z-index: 10000000000000000000;
+}
+
+#loader::before,
+#loader::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    display: block;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    border-right: 5px solid #ffbe0b;
+    border-radius: 50%;
+    animation: left036 0.9s linear infinite;
+}
+
+#loader::after {
+    width: 90px;
+    height: 90px;
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+    border: 0;
+    border-top: 5px solid #ff086e;
+    animation: none;
+}
+
+@keyframes right5231 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes left036 {
+    from {
+        transform: rotate(720deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
+
+/* ========================================== */
+
+.nav {
+    z-index: 50000000000;
+}
+
+
+.nav-link {
+    color: white;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+.nav-link:hover,
+#close:hover {
+    color: brown;
+}
+
+
+.main {
+    width: 100%;
+    /* height: 30vh; */
+    position: relative;
+}
+
+.header {
+    width: 300px;
+    height: 100vh;
+    z-index: 99900000000099;
+}
+
+.open {
+    z-index: 10000000000;
+    color: white;
+    margin-left: 315px;
+    margin-top: 40px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.open:hover {
+    opacity: 0.8;
+}
+
+
+#close {
+    right: 50px;
+    top: 50px;
+    color: white;
+    position: absolute;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+}
+
+/* ===================== Start of Home Section ================= */
+
+.Home {
+    height: 90vh;
+    background: url("../images/events-heavenly-header.jpeg") no-repeat center center;
+    background-size: cover;
+    margin-bottom: 100px !important;
+    position: relative;
+}
+
+.overlay {
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(192, 50, 50, 0.652);
+}
+
+.homeContent {
+    position: absolute;
+    top: 30%;
+}
+
+.homeContent h1 {
+    font-size: 65px;
+}
+
+.homeContent p {
+    font-size: 18px;
+}
+
+
+
+/* ===================== End of Home Section ================= */
+
+/* ===================== Start of Dauration Section ================= */
+
+.Duration {
+    overflow: auto !important;
+}
+
+.accordion {
+    --accordion-btn-icon: none !important;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-button {
+    text-align: center !important;
+    font-size: 35px !important;
+    font-weight: 600 !important;
+    justify-content: center !important;
+    color: #fff !important;
+    background-color: #E68184 !important;
+    margin: 0px auto;
+}
+
+.accordion-button::after {
+    width: 0 !important;
+    height: 0 !important;
+    background-image: none !important;
+}
+
+/* ===================== End of Dauration Section ================= */
+
+/* ===================== Start of Details Section ================= */
+.details {
+    overflow: hidden !important;
+    position: relative;
+    background: url(../images/invitation-2508607__340.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+}
+
+
+.overlay {
+    height: 100% !important;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(192, 50, 50, 0.652);
+}
+
+.col-md-3 {
+    margin: 50px auto;
+    max-width: 23%;
+}
+
+
+
+@media screen and (max-width:992px) {
+    .accordion-button {
+        font-size: 25px !important;
+    }
+}
+
+/* ===================== End of Details Section ================= */
+
+/* ===================== Start of Contact Section ================= */
+
+
+.form-content h5 {
+    font-size: 20px;
+    /* color: #444444; */
+}
+
+.socialIcons ul li {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.socialIcons ul li a {
+    font-size: 20px;
+    color: gray;
+}
+
+.socialIcons ul li:hover a {
+    color: white;
+}
+
+.socialIcons ul li:hover {
+    background-color: #D62E33;
+}
+
+.form-group input,
+.form-group textarea {
+    border: 2px solid #ccc !important;
+    box-shadow: none;
+    transition: all 0.5s;
+    outline: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: none;
+    border: 2px solid #D62E33 !important;
+}
+
+textarea {
+    height: 170px;
+    box-shadow: none !important;
+    padding: 12px;
+}
+
+.button {
+    color: white !important;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #D62E33 !important;
+}
+
+/* ===================== End of Contact Section ================= */
